@@ -53,7 +53,7 @@ you can also can add the script to your package.json file, so you can run it fro
 ```
 
 Then run:  
-```json
+```bash
 npm run generate-commit-msg
 ```
 
