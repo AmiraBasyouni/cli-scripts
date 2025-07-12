@@ -15,7 +15,7 @@ To get started, install the script in your project's `./scripts` directory.
 **Installation:**
 
 ```bash
-curl -o scripts/generate-commit-msg.sh https://raw.githubusercontent.com/AmiraBasyouni/cli-scripts/main/scripts/generate-commit-msg.sh
+curl -o scripts/generate-commit-msg.sh https://raw.githubusercontent.com/AmiraBasyouni/cli-scripts/refs/heads/main/generate-commit-msg.sh
 ```
 
 Create a file to store your API key:
