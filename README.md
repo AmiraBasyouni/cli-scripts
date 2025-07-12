@@ -1,8 +1,8 @@
 # cli-scripts 
 
-A collection of standalone developer scripts that might speed up your workflow.  
-The scripts are targeted towards a developers whose workflow depends on a Bash terminal.  
-No need to install the whole repository, I recommend you make a copy of any scripts you think you may need.
+A collection of self-contained developer scripts that can speed up your workflow.  
+There’s no need to install the entire repository. Instead, I recommend copying only the scripts that can complement your workflow.   
+For convenience, consider adding each script to your `package.json` file.
 
 ## 🗒️ Available Scripts
 
@@ -10,12 +10,18 @@ No need to install the whole repository, I recommend you make a copy of any scri
 
 Prompt Grok (or any AI of your choosing, granted you update the script accordingly) to generate a Conventional Commit message based on locally staged changes
 
-To get started, install the script in your project's `./scripts` directory.
+To get started, cd into the root of your project directory.
 
 **Installation:**
 
+Install the script into your ./scripts directory (make sure the directory exists):
 ```bash
-curl -o scripts/generate-commit-msg.sh https://raw.githubusercontent.com/AmiraBasyouni/cli-scripts/refs/heads/main/generate-commit-msg.sh
+curl -o ./scripts/generate-commit-msg.sh https://raw.githubusercontent.com/AmiraBasyouni/cli-scripts/refs/heads/main/generate-commit-msg.sh
+```
+
+Transform the script file into an executable:
+```bash
+chmod u+x ./scripts/generate-commit-msg.sh
 ```
 
 Create a file to store your API key:
@@ -31,7 +37,7 @@ chmod 600 ~/.xai_api_key
 **Example usage:**
 ```bash
 $ git add src/App.jsx
-$ ./commit-msg-suggester.sh
+$ ./scripts/commit-msg-suggester.sh
 Suggested commit message:
 feat: add form validation to App.jsx
 - Implemented useState for form input handling
@@ -41,25 +47,23 @@ Commit successful!
 ```
 
 ## 📫 Suggestions
-Each script is fully self-contained. You can:
-Copy/paste a single file into your repo.
-Add it to package.json like so:
+Once added to `package.json`, scripts can be run from any location within your project directory.
 
-you can also can add the script to your package.json file, so you can run it from anywhere within your project directory (recommended):
+Add the script:
 ```json
 "scripts": {
-  "generate-commit-msg": "bash scripts/generate-commit-msg.sh"
+  "commit": "./scripts/generate-commit-msg.sh"
 }
 ```
 
-Then run:  
+Then run it using:  
 ```bash
-npm run generate-commit-msg
+npm run commit
 ```
 
 ## 🌐 Contributions
 This project is intended for personal use. At the moment, I’m not accepting external contributions.
-Feel free to explore the scripts and adapt them to your own workflow.
+Feel free to explore the scripts and adapt them to your development workflow
 
 ## 🏷️ License
 
